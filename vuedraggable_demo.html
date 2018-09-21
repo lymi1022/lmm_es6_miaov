@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/vue/2.5.2/vue.min.js"></script>
+<script src="http://cdn.jsdelivr.net/npm/sortablejs@1.7.0/Sortable.min.js"></script>
+ 
+<script src="http://cdnjs.cloudflare.com/ajax/libs/Vue.Draggable/2.15.0/vuedraggable.min.js"></script>
+</head>
+<body>
+<div id="tuozhuai_view">
+<!--  -->
+<draggable  v-model="fruit" :options="{group:'people'}">
+  <div v-for="element in fruit">{{element}}</div>
+</draggable>
+{{fruit}}
+<br>
+<br>
+<draggable  v-model="girl" :options="{group:'people'}">
+  <div v-for="element in girl">{{element}}</div>
+</draggable>
+{{girl}}
+</div>
+ 
+<script type="text/javascript">
+new Vue({
+el:'#tuozhuai_view',
+data:{
+fruit:['apple','banana','orage'],
+girl:['linzhil','cjk','bdyjy'],
+}
+})
+</script>
+</body>
+</html>
